@@ -1,0 +1,586 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto:wght@900&display=swap');
+@font-face {
+    font-family: 'Dovemayo_gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    }
+@font-face {
+        font-family: 'Dovemayo_wild';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/Dovemayo_wild.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+@media ( max-width: 767px ){
+
+}
+@media ( min-width: 768px ) and ( max-width: 991px ){
+
+}
+@media ( min-width: 992px ) and ( max-width: 1199px ){
+
+}
+@media ( min-width: 1200px ){
+    
+}
+
+/* ====reset css====*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul, ol {
+    list-style: none;
+}
+body {
+    font-family: 'Dovemayo_gothic', sans-serif;
+    font-size: 1.5em;
+}
+.inner {
+    width: 1180px;
+    margin: 0 auto;
+}
+hr {
+   display:block;
+   height:1px;
+   border:0;
+   margin:0;
+   padding:0;
+}
+
+/*==== header 영역 =====*/
+header{
+    width: 100%;
+    background: none;
+}
+header .inner {
+    width: 70%;
+    height: 0;
+    margin: 0 auto;
+    display: flex;                     /* 가로배열 */
+    justify-content: space-between;   /* 양끝에 맞춤 */
+    align-items: center;              /* 로고와 탑메뉴 높이의 중앙 맞춤 */
+    padding-top: 0px;
+}
+header .inner h1 {
+    width: 75px;
+}
+header .inner h1 a img {
+    width: 170%;
+    position: relative;
+    z-index: 3;
+    margin-top: 200px;
+    left: 85px;
+}
+
+/* header - gnb */
+header .inner #gnb {
+    position: absolute;
+    top: 30px;
+    right: 370px;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+}
+header .inner #gnb ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background: none; /* Remove background */
+}
+header .inner #gnb li {
+    float: left;
+}
+header .inner #gnb li a {
+    display: block;
+    font-size: 1.0rem;
+    font-weight: 500;
+    color: #fff;
+    padding: 30px 18px;
+    transition: all 0.3s;
+    font-family: NotoSans;
+    font-weight: medium;
+    letter-spacing: -0.4px;
+}
+header .inner #gnb li a:hover {
+    color: #F2A8C3;
+}
+
+/* ==== figure 영역 ======== */
+figure {
+    width: 100%;
+    height: calc(100vh + 100px);
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    padding-top: 200px;
+}
+figure video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* figure .main_vis .trn img {
+    position: absolute;
+    top: -1500px;
+    z-index: 100;
+} */
+figure .trn img {
+    position: absolute;
+    top: -1500px; /* 적절한 위치로 조정 */
+    z-index: 100; /* 필요한 경우 적절한 z-index 값으로 조정 */
+}
+figure .inner {
+    position: relative;
+    z-index: 4;
+}
+figure .inner h1 {
+    font-size: 5rem;
+    color: #F2A8C3;
+    font-weight: 400;
+    margin-bottom: 7px;
+    margin-left: 30px;
+    margin-top: 70px;
+    -webkit-text-stroke: 6px #F2A8C3;
+}
+figure .inner p {
+    color: #fff;
+    line-height: 0.7;
+    margin-bottom: 40px;
+    margin-left: 30px;
+    font-size: 1.3rem;
+}
+figure .inner a {
+    display: block;
+    width: 180px;
+    background: #F2A8C3;
+    border-radius: 70px;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    transition: all 0.2s;
+    margin-left: 30px;
+    font-size: 1.5rem;
+}
+figure .inner li {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #fff;
+    margin-left: 850px;
+    position: absolute;
+    margin-top: -320px;
+    -webkit-text-stroke: 4px #fff;
+}
+figure .inner a:hover {
+    background: #fff;
+    color: #F2A8C3;
+}
+
+/* 슬라이드 애니메이션 */
+.trn {
+    opacity: 0;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes slideLeft {
+    0% {
+         transform: translateX(-500px) translateY(-600px);
+         opacity: 0;
+    }
+    100% {
+         transform: translateX(-100px) translateY(-500px);
+         opacity: 1;
+    }
+}
+
+
+@keyframes slideLeft {
+    0% {
+         transform: translateX(-500px) translateY(-600px);
+         opacity: 0;
+    }
+    100% {
+         transform: translateX(-100px) translateY(-500px);
+         opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+         transform: translateX(100px) translateY(-1650px);
+         opacity: 0;
+    }
+    100% {
+         transform: translateX(-10px) translateY(-1550px);
+         opacity: 1;
+    }
+}
+/* 2.png와 3.png에 슬라이드 애니메이션을 적용합니다. */
+.main_vis .trn.slideLeft {
+    animation-name: slideLeft;
+    animation-delay: 0.4s;
+}
+
+.main_vis .trn.slideRight {
+    animation-name: slideRight;
+    animation-delay: 0.6s;
+}
+
+
+
+
+/*=== main 영역 ===*/
+@keyframes motion {
+    0% { margin-top: 0px; }
+    100% { margin-top: 20px; }
+}
+
+.cloud01 {
+    position: relative;
+    top: 140px;
+    z-index: 100;
+}
+
+.cloud01 .inner .animated-image {
+    width: 20%;
+    position: absolute;
+    left: 0;
+    animation: motion 1s linear 0s infinite alternate;
+    -webkit-animation: motion 1s linear 0s infinite alternate;
+}
+
+/* 이미지를 아래로 이동시키려면 다음 스타일을 사용합니다. */
+.cloud01 .inner img {
+    width: 20%;
+    margin-top: -300px; /* 이미지를 아래로 300px 이동시킵니다. */
+    left: 0;
+    position: absolute;
+}
+
+.cloud02 {
+    position: relative;
+    top: 160px;
+    z-index: 100;
+}
+
+/* 이미지를 아래로 이동시키려면 다음 스타일을 사용합니다. */
+.cloud02 .inner .animated-image {
+    width: 20%;
+    position: absolute;
+    right: 0;
+    animation: motion 1s linear 0s infinite alternate; /* motion을 재사용 */
+    -webkit-animation: motion 1s linear 0s infinite alternate; /* motion을 재사용 */
+}
+
+/* 이미지를 아래로 이동시키려면 다음 스타일을 사용합니다. */
+.cloud02 .inner img {
+    width: 20%;
+    margin-top: -300px; /* 이미지를 아래로 300px 이동시킵니다. */
+    right: 0;
+    position: absolute;
+}
+
+main {
+    height: calc(100vh - 120px); /* 화면 맞춤 */
+    width: 100%;
+    padding: 100px 0;
+}
+main .inner h2 {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #000;
+    text-align: center;
+    /* margin-bottom: px; */
+    font-family: 'Notosans';
+    margin-top: -70px;
+    letter-spacing: -0.2px;
+}
+main .inner .wrap article .pic img{
+    width: 40%;
+    height: 40%;
+    margin: auto;
+    display: block;
+    object-fit: cover;
+    margin-left: 270px;
+    margin-top: 30px;
+}
+main .inner .wrap article h3{
+    color: #000;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    font-family: 'Dovemayo_gothic';
+    -webkit-text-stroke: 0.7px #000;
+    font-size: 1.5rem;
+}
+main .inner .wrap article h4{
+    color: #000;
+    font-weight: 300;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    font-family: 'NotoSans';
+    line-height: 1.6;
+    letter-spacing: -0.2px;
+}
+
+/* ===== section ===== */
+.ground {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+    margin-top: -300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* 썸네일을 수평으로 가운데 정렬 */
+    align-items: center;
+    z-index: 2;
+}
+.ground .inner .wrap {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* 썸네일을 수평으로 가운데 정렬 */
+    align-items: center;
+}
+.ground .inner .wrap article {
+    width: 30%; /* 예시로 20%로 설정, 필요에 따라 더 조절 가능 */
+    margin-right: 20px; /* 가로 간격을 원하는 만큼 조절 가능 */
+    flex: 1;
+    padding: 20px;
+    /* background-color: #fff; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ground .inner .wrap article h2 {
+    font-size: 1.3rem;
+    margin-bottom: 20px; /* 마진 조정 */
+    margin-top: 0; /* 기본 마진 제거 */
+}
+.ground .inner .wrap article p {
+    font-size: 0.7rem;
+    color: #616161;
+    letter-spacing: -0.5px;
+    margin-top: 5px; /* 마진 조정 */
+    margin-bottom: 20px; /* 마진 조정 */
+    font-family: NotoSans;
+    line-height: 1.8;
+    flex-direction: column
+}
+.ground .inner .wrap article .pic {
+    width: 30%;
+    height: auto; /* 높이 자동 조정 */
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden; /* 추가 */
+}
+.ground .inner .wrap article .pic img {
+    max-width: 100%; /* 이미지 너비 최대 크기 지정 */
+    height: auto; /* 높이 자동 조정 */
+}
+
+/* ===== 추가 이미지 3장 ===== */
+.tag {
+    padding-top: 5px; 
+    bottom: 50px;
+    /* 상단 여백 조정 */
+    background-color: #fff; /* 배경색 지정 */
+    display: flex;
+    flex-wrap: wrap; /* 아이템이 넘칠 경우 다음 줄로 내려가도록 설정 */
+    justify-content: center;
+    align-items: center;
+    position: relative; /* 위치 지정을 위해 추가 */
+    /* top: 1000px; */ /* 필요에 따라 위치 조정 */
+}
+.tag .inner .wrap {
+    width: 100%; /* 가로폭을 100%로 설정 */
+    margin: -8px;
+    display: flex;
+    flex-wrap: wrap; /* 아이템이 넘치면 다음 줄로 내려가도록 설정 */
+    justify-content: center;
+    align-items: center;
+}
+.tag article {
+    width: calc(33.3333% - 20px); /* 아이템 간격을 고려한 너비 설정 */
+    margin-right: -100px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* 아이템 내부 패딩 설정 */
+    box-sizing: border-box; /* 내부 패딩이 전체 너비에 포함되도록 설정 */
+}
+/* 마지막 아이템의 오른쪽 여백 제거 */
+.tag article:last-child {
+    margin-right: 0;
+}
+.tag article .pic {
+    width: 75%;
+    height: 250px;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.tag article .pic::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 35px;
+    height: 52px;
+}
+.tag article .pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 글자 */
+.text {
+    text-align: center;
+    font-family: 'NotoSans';
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-top: 50px;
+    margin-bottom: 170px;
+    letter-spacing: -0.5px;
+}
+/* 동영상 라운드 사각형 스타일 */
+.video-section {
+    /* 상단 여백 조정 */
+    background-color: #F9F5F0; /* 배경색 지정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    width: 1168px;
+    height: 480px;
+    margin-left: 340px;
+    z-index: 4;
+}
+
+
+.video-container {
+    margin-top: 40px;
+    width: 631px; /* 동영상 박스의 가로 너비 설정 */
+    height: 311px; /* 동영상 박스의 세로 높이 설정 */
+    /* 라운드 사각형을 위한 원형 설정 */
+    overflow: hidden;
+    position: relative;
+    margin-right: 50px;
+    float: right;
+}
+
+.video-box iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 텍스트 컨테이너 스타일 */
+.text-container {
+    /* flex: 1; */
+    padding: 50px;
+    /* box-sizing: border-box;  */
+    /* 내부 패딩을 포함한 크기 계산 */
+}
+
+.text-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    line-height: 0.7;
+    font-family: 'NotoSans';
+    font-size: 110%;
+    font-weight: 900;
+    letter-spacing: -0.8px;
+}
+
+.text-container p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    font-family: 'NotoSans';
+    font-size: 60%;
+    letter-spacing: -0.3px;
+}
+
+.text-container h4 {
+    font-size: 1.25rem;
+    margin-top: 70px;
+}
+
+/* 푸터 스타일 */
+footer {
+    text-align: center; /* 텍스트 가운데 정렬 */
+    color: #fff; /* 글자색 설정 */
+    padding: 10px 0; /* 위아래 여백 설정 */
+    padding-bottom: 0; /* 푸터 아래 여백 제거 */
+    position: relative; /* 상대 위치 설정 */
+}
+
+/* 로고 스타일 */
+footer .logo img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100px; /* 원하는 크기로 조절 */
+    height: auto; /* 가로 세로 비율 유지 */
+    position: absolute; /* 절대 위치 설정 */
+    z-index: 1;
+    top: 280px;
+    left: 0;
+    right: 0;
+}
+
+footer .email p {
+    margin-top: 10px; /* 로고와의 간격 조정 */
+    z-index: 10;
+    font-size: 14px; /* 원하는 크기로 조절 */
+    font-family: 'NotoSans';
+    position: relative;
+}
+
+/* 카피라이트 위치 조정 */
+footer .copyright p {
+    font-size: 12px; /* 원하는 크기로 조절 */
+    font-family: 'NotoSans';
+    position: absolute; /* 절대 위치 설정 */
+    top: 340px; /* 로고와의 간격 조정 (원하는 값으로 조절) */
+    left: 0;
+    right: 0;
+    z-index: 20; /* 다른 요소보다 위에 표시될 z-index 값 설정 */
+    transform: translate(0%, -50%);
+}
+
+/* 푸터 밑에 PNG 이미지 스타일 */
+footer .footer-image {
+    text-align: center; /* 가운데 정렬 */
+    margin-top: -300px; /* 푸터 아래 간격 조정 */
+    padding: 0;
+}
+
+/* 푸터 밑에 PNG 이미지 스타일 */
+footer .footer-image img {
+    max-width: 100%; /* 이미지가 푸터의 너비를 초과하지 않도록 설정 */
+}

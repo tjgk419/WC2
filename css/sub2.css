@@ -1,0 +1,224 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto:wght@900&display=swap');
+@font-face {
+    font-family: 'Dovemayo_gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    }
+@font-face {
+        font-family: 'Dovemayo_wild';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/Dovemayo_wild.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+/* ====reset css====*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul, ol {
+    list-style: none;
+}
+body {
+    font-family: 'Dovemayo_gothic', sans-serif;
+    font-size: 1.5em;
+}
+.inner {
+    width: 1180px;
+    margin: 0 auto;
+}
+hr {
+   display:block;
+   height:1px;
+   border:0;
+   margin:0;
+   padding:0;
+}
+
+/*==== header 영역 =====*/
+header{
+    width: 100%;
+    background: none;
+}
+header .inner {
+    width: 70%;
+    height: 0;
+    margin: 0 auto;
+    display: flex;                     /* 가로배열 */
+    justify-content: space-between;   /* 양끝에 맞춤 */
+    align-items: center;              /* 로고와 탑메뉴 높이의 중앙 맞춤 */
+    padding-top: 0px;
+}
+header .inner h1 {
+    width: 75px;
+}
+header .inner h1 a img {
+    width: 170%;
+    position: relative;
+    z-index: 3;
+    margin-top: 200px;
+    left: 85px;
+}
+
+/* header - gnb */
+header .inner #gnb {
+    position: absolute;
+    top: 30px;
+    right: 370px;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+}
+header .inner #gnb ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background: none; /* Remove background */
+}
+header .inner #gnb li {
+    float: left;
+}
+header .inner #gnb li a {
+    display: block;
+    font-size: 1.0rem;
+    font-weight: 500;
+    color: #fff;
+    padding: 30px 18px;
+    transition: all 0.3s;
+    font-family: NotoSans;
+    font-weight: medium;
+    letter-spacing: -0.4px;
+}
+header .inner #gnb li a:hover {
+    color: #F2A8C3;
+}
+
+/* ==== figure 영역 ======== */
+figure {
+    width: 100%;
+    height: calc(100vh - 120px);
+    position: relative;
+    overflow: hidden;
+    padding-top: 200px; /* 16:9 비율인 경우 (803 / 1920 * 100) */
+}
+
+figure video {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*=== main 영역 ===*/
+main {
+    height: calc(100vh - 120px); /* 화면 맞춤 */
+    width: 100%;
+    padding: 50px 0;
+}
+main .inner .pic img{
+    width: 30%;
+    height: 30%;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+    /* margin-left: -90px; */
+}
+main .inner h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    /* -webkit-text-stroke: 0.3px #000; */
+    color: #000;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    font-family: 'Notosans';
+    letter-spacing: -0.8px;
+}
+main .inner p{
+    font-size: 0.9rem;
+    font-weight: 200;
+    /* -webkit-text-stroke: 0.3px #000; */
+    color: #000;
+    text-align: center;
+    /* margin-bottom: px; */
+    font-family: 'Notosans';
+    letter-spacing: -0.8px;
+}
+main .inner .wrap article .pic2 img{
+    width: 20%;
+    height: 20%;
+    margin: auto;
+    display: block;
+    object-fit: cover;
+    margin-top: 60px;
+    /* margin-left: 180px; */
+}
+
+#slider_wrap {
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    /* height: 100vh;  */
+    /* 화면 높이에 맞게 설정, 필요에 따라 조절 가능 */
+    margin-top: -200px;
+}
+.bxslider {
+    margin: auto;/* 슬라이더의 스타일을 여기에 추가하세요. */
+}
+
+/* 푸터 스타일 */
+footer {
+    text-align: center; /* 텍스트 가운데 정렬 */
+
+    color: #fff; /* 글자색 설정 */
+    padding: 10px 0; /* 위아래 여백 설정 */
+    padding-bottom: 0; /* 푸터 아래 여백 제거 */
+    position: relative; 
+    /* 상대 위치 설정 */
+    /* z-index: 2;  */
+    /* 푸터를 다른 요소 위에 표시 */
+    
+}
+
+/* 로고 스타일 */
+footer .logo img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100px; /* 원하는 크기로 조절 */
+    height: auto; /* 가로 세로 비율 유지 */
+    position: absolute; /* 절대 위치 설정 */
+    z-index: 1;
+    top: 200px;
+    left: 0;
+    right: 0;
+}
+
+footer .email p {
+    margin-top: 10px; /* 로고와의 간격 조정 */
+    z-index: 10;
+    font-size: 14px; /* 원하는 크기로 조절 */
+    font-family: 'NotoSans';
+    position: relative;
+    color: #000;
+    padding-bottom: 50px;
+}
+
+/* 카피라이트 위치 조정 */
+footer .copyright p {
+    font-size: 12px; /* 원하는 크기로 조절 */
+    font-family: 'NotoSans';
+    position: absolute; /* 절대 위치 설정 */
+    top: 280px; /* 로고와의 간격 조정 (원하는 값으로 조절) */
+    left: 0;
+    right: 0;
+    z-index: 20; /* 다른 요소보다 위에 표시될 z-index 값 설정 */
+    transform: translate(0%, -50%);
+}

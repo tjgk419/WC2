@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>COOING</title>
+        <!-- favicon 링크 -->
+        <link rel="shortcut icon" href="img/logo2.ico" type="image/x-icon">
+        <!-- 외부 CSS링크 -->
+        <link rel="stylesheet" type="text/css" href="css/sub2.css">
+        <link rel="stylesheet" type="text/css" href="jquery.bxslider.css">
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+        <!-- 구글폰트아이콘 링크 -->
+        <script src="https://kit.fontawesome.com/3a303ac6d3.js" crossorigin="anonymous"></script>
+        <!-- video carousel -->
+        <script src="js/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    </head>
+    <body>
+        <!-- header 영역 -->
+        <header>
+            <div class="inner">
+                <!-- logo -->
+                <h1>
+                    <a href="index.html"><img src="img/white.png" alt="COOING"></a>
+                </h1>
+                <!-- gnb-->
+                <ul id="gnb">
+                    <li>
+                        <a href="sub1.html">초점책이란?</a>
+                    </li>
+                    <li>
+                        <a href="sub2.html">샘플</a>
+                    </li>
+                    <li>
+                        <a href="#">초점책그리기</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- figure 영역 -->
+        <figure class="sub1">
+            <video src="img/sub2.mp4" autoplay="autoplay" muted="muted" loop="loop"></video>
+        </figure>
+
+        <main>
+            <div class="inner">
+                <div class="pic">
+                    <img src="img/friend.png" alt="초점책 친구들">
+                    <h3>캐릭터 그리는 게 어려우신가요?</h3>
+                    <p>초점책 친구들이 도와줄 거에요!</p>
+                </div>
+                <div class="wrap">
+                    <!-- 썸네일 -->
+                    <article>
+                        <div class="pic2">
+                            <img src="img/rabitcat.png" alt="초점책 토끼고양이">
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <div id="slider_wrap">
+            <ul class="bxslider">
+                <li><img src="img/page1.png"></li>
+                <li><img src="img/page2.png"></li>
+                <li><img src="img/page3.png"></li>
+                <li><img src="img/page4.png"></li>
+                <li><img src="img/page5.png"></li>
+                <li><img src="img/page6.png"></li>
+                <li><img src="img/page7.png"></li>
+                <li><img src="img/page8.png"></li>
+                <li><img src="img/page9.png"></li>
+                <li><img src="img/page10.png"></li>
+                <li><img src="img/page11.png"></li>
+                <li><img src="img/page12.png"></li>
+                <li><img src="img/page13.png"></li>
+            </ul>
+
+        </div>
+        <script>
+            $('.bxslider').bxSlider({
+                auto: true,
+                autoControls: true,
+                stopAutoOnClick: true,
+                pager: true,
+                slideWidth: 1000,
+                minSlides: 1,
+                maxSlides: 1
+
+            });
+        </script>
+
+        <!-- footer 영역 -->
+        <footer>
+            <!-- copyright 및 주소 -->
+            <div class="copyright">
+                <div class="logo">
+                    <img src="img/black.png" alt="로고">
+                </div>
+                <div class="email">
+                    <p>Copyright &copy; 2023. All Right Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>

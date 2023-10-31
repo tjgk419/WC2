@@ -1,0 +1,844 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto:wght@900&display=swap');
+@font-face {
+    font-family: 'Dovemayo_gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    }
+@font-face {
+        font-family: 'Dovemayo_wild';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/Dovemayo_wild.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+/* ====reset css====*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul, ol {
+    list-style: none;
+}
+body {
+    font-family: 'Dovemayo_gothic', sans-serif;
+    font-size: 1.5em;
+}
+.inner {
+    width: 1180px;
+    margin: 0 auto;
+}
+hr {
+   display:block;
+   height:1px;
+   border:0;
+   margin:0;
+   padding:0;
+}
+
+/*==== header 영역 =====*/
+header{
+    width: 100%;
+    background: none;
+}
+header .inner {
+    width: 70%;
+    height: 0;
+    margin: 0 auto;
+    display: flex;                     /* 가로배열 */
+    justify-content: space-between;   /* 양끝에 맞춤 */
+    align-items: center;              /* 로고와 탑메뉴 높이의 중앙 맞춤 */
+    padding-top: 0px;
+}
+header .inner h1 {
+    width: 75px;
+}
+header .inner h1 a img {
+    width: 170%;
+    position: relative;
+    z-index: 3;
+    margin-top: 200px;
+    left: 85px;
+}
+
+/* header - gnb */
+header .inner #gnb {
+    position: absolute;
+    top: 30px;
+    right: 370px;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+}
+header .inner #gnb ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background: none; /* Remove background */
+}
+header .inner #gnb li {
+    float: left;
+}
+header .inner #gnb li a {
+    display: block;
+    font-size: 1.0rem;
+    font-weight: 500;
+    color: #fff;
+    padding: 30px 18px;
+    transition: all 0.3s;
+    font-family: NotoSans;
+    font-weight: medium;
+    letter-spacing: -0.4px;
+}
+header .inner #gnb li a:hover {
+    color: #F2A8C3;
+}
+
+/* ==== figure 영역 ======== */
+figure {
+    width: 100%;
+    height: calc(100vh - 120px);
+    position: relative;
+    overflow: hidden;
+    padding-top: 200px; /* 16:9 비율인 경우 (803 / 1920 * 100) */
+}
+
+figure video {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*=== main 영역 ===*/
+main {
+    height: calc(100vh - 120px); /* 화면 맞춤 */
+    width: 100%;
+    padding: 100px 0;
+    display: flex; /* 추가: 내부 요소들을 가로로 정렬하기 위해 flex로 설정합니다. */
+    justify-content: center; /* 추가: 가로 가운데 정렬합니다. */
+    align-items: center; /* 추가: 세로 가운데 정렬합니다. */
+}
+
+.main{
+    position: relative;
+    width: 100%;
+}
+main .sub_inner{
+    position: absolute;
+    height: 500px;
+    left: 55%;
+    transform: translate(-50%, 50%);
+}
+main .sub_inner .pic img{
+    position: relative;
+}
+main .sub_inner h2 {
+    position: absolute;
+    top: -280px;
+    /* left: 50%; */
+    text-align: center;
+    /* transform: translate(-50%, 50%); */
+    font-size: 1.1rem;
+    font-weight: 500;
+    -webkit-text-stroke: 0.3px #000;
+    color: #000;
+    /* margin-bottom: px; */
+    font-family: 'Notosans';
+    margin-top: -130px;
+    margin-bottom: 30px;
+}
+
+main .sub_inner .wrap article .pic img{
+    position: absolute;
+    width: 970px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    /* object-fit: cover; */
+    margin-left: -385px;
+    margin-top: -380px;
+}
+main .sub_inner .wrap article h4{
+    position: relative;
+    color: #9F9F9F;
+    font-weight: 300;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'NotoSans';
+    line-height: 1.6;
+    z-index: 2;
+    /* left: 90%; */
+    top: 120px;
+    left: -45px;
+}
+
+/* 글자 */
+.blue .inner1 h1 {
+    text-align: center;
+    /* display: flex; */
+    font-family: 'NotoSans';
+    color: #274D8C;
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin-top: -80px;
+    margin-bottom: 10px;
+    margin-left: 80px;
+    letter-spacing: -1.5px;
+}
+
+.blue .inner1 p {
+    text-align: center;
+    font-family: 'Dovemayo_wild';
+    color: #9F9F9F;
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 80px;
+}
+
+/* baby section */
+.baby {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 90px;
+    margin-right: 170px;
+}
+
+.baby .baby-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*left 영역*/
+.baby .baby-wrap .baby-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    padding-top: 70px;
+}
+
+/* .baby .baby-wrap .baby-left h1,
+.baby .baby-wrap .baby-left h2,
+.baby .baby-wrap .baby-left p {
+    text-align: left;
+} */
+.baby .baby-wrap .baby-left h1{
+    font-size: 20px;
+    margin-left: 210px;
+    margin-top: 10px;
+    font-family: 'NotoSans';
+    font-weight: 900;
+    color:#9F9F9F;
+    letter-spacing: -1.5px;
+}
+.baby .baby-wrap .baby-left h2{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-left: 210px;
+    margin-bottom: 40px;
+    font-family: 'NotoSans';
+    font-weight: 500;
+    color:#9F9F9F;
+    letter-spacing: -1.5px;
+}
+.baby .baby-wrap .baby-left p{
+    font-size: 11px;
+    margin-left: 210px;
+    font-family: 'NotoSans';
+    font-weight: 400;
+    color:#9F9F9F;
+    line-height: 2;
+    letter-spacing: -1.0px;
+}
+
+/* baby-right 영역 */
+.baby .baby-wrap .baby-right {
+    width: 50%;
+    margin-right: 60px;
+}
+
+.baby .baby-wrap .baby-right .baby02 {
+    margin-top: 25px;
+
+}
+
+.baby .baby-wrap .baby-right .baby02 .baby02-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.baby .baby-wrap .baby-right .baby02 .baby02-wrap article .pic {
+    width: 10%;
+    max-height: 100px;
+}
+
+/* 이미지 크기를 명시적으로 조절 */
+.baby .baby-wrap .baby-right .baby02 .baby02-wrap article .pic img {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+/* baby section02 */
+.baby03 {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 160px;
+    margin-right: 170px;
+}
+
+.baby03 .baby03-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*left 영역*/
+.baby03 .baby03-wrap .baby-left02 {
+    width: 50%;
+}
+
+.baby03 .baby03-wrap .baby-left02 article .pic {
+    width: 10%;
+    max-height: 100px;
+    margin-top: 25px;
+}
+
+/* 이미지 크기를 명시적으로 조절 */
+.baby03 .baby03-wrap .baby-left02 article .pic img {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+    /* margin-right: 300px; */
+    margin-left: 160px;
+    margin-top: -150px;
+}
+
+.baby03 .baby03-wrap .baby-text {
+    width: 50%;
+}
+
+.baby03 .baby03-wrap .baby-text .baby04 {
+    margin-top: 25px;
+}
+
+.baby03 .baby03-wrap .baby-text .baby04 .baby-right02 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    margin-top: -10px;
+    margin-left: 75px;
+}
+
+/* .baby .baby-wrap .baby-left h1,
+.baby .baby-wrap .baby-left h2,
+.baby .baby-wrap .baby-left p {
+    text-align: left;
+} */
+.baby03 .baby03-wrap .baby-text .baby04 .baby-right02 h1{
+    font-size: 20px;
+    margin-top: 55px;
+    font-family: 'NotoSans';
+    font-weight: 900;
+    color:#9F9F9F;
+    text-align: left;
+    white-space: nowrap;
+    margin-left: -40px;
+    letter-spacing: -1.5px;
+}
+.baby03 .baby03-wrap .baby-text .baby04 .baby-right02 h2{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-family: 'NotoSans';
+    font-weight: 500;
+    color:#9F9F9F;
+    text-align: left;
+    white-space: nowrap;
+    margin-left: -40px;
+    letter-spacing: -1.5px;
+}
+.baby03 .baby03-wrap .baby-text .baby04 .baby-right02 p{
+    font-size: 11px;
+    font-family: 'NotoSans';
+    font-weight: 400;
+    color:#9F9F9F;
+    line-height: 2.2;
+    text-align: left;
+    white-space: nowrap;
+    margin-left: -40px;
+    letter-spacing: -1.0px;
+}
+
+/* cloud02 */
+.cloud02 {
+    width: 100%;
+    height: 664px; 
+    /* 원하는 높이로 조정하세요. */
+    /* 기존의 내용과 필요한 스타일을 추가로 설정할 수 있습니다. */
+}
+
+.cloud02 .cloud-bg {
+    background-image: url('../img/cloud02_px.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    margin-top: -500px;
+}
+
+/* shapes section */
+.shapes {
+    background-color: #CED7FF; /* 원하는 배경색 지정 */
+    padding: 100px 0; /* 원하는 패딩 값 설정 */
+    height: 580px;
+
+    /* 요소들을 가운데 정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shape_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* 내용의 최대 너비 설정 */
+    width: 90%; /* 내용의 너비 설정 */
+    margin-left: 220px;
+}
+
+/* 원 안에 이미지 스타일 */
+.shape-with-image img {
+    max-width: 35%; /* 이미지가 너비를 초과하지 않도록 설정 */
+    max-height: 35%; /* 이미지가 높이를 초과하지 않도록 설정 */
+    position: relative;
+    /* 추가적인 스타일링을 원하는대로 적용하세요 */
+    margin-left: 560px;
+}
+
+.stability .text h1 {
+    font-family: 'NotoSans';
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #333333;
+    text-align: left; /* 텍스트 가운데 정렬 */
+    /* 기타 스타일 속성 추가 */
+    margin-left: -1050px;
+    margin-bottom: 60px;
+    letter-spacing: -1.0px;
+}
+
+/* shapes section 내부의 h3 스타일 */
+.stability .text p {
+    font-family: 'NotoSans';
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #333333;
+    text-align: left; /* 텍스트 가운데 정렬 */
+    /* 기타 스타일 속성 추가 */
+    margin-left: -1050px;
+    margin-top: 30px;
+    line-height: 2.3;
+    letter-spacing: -0.8px;
+}
+
+/* 컬러 영역 */
+.color {
+    margin-top: 200px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center; /* 가로 가운데 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    text-align: center;
+}
+.color_line {
+    border-top: 1.5px solid #DCDCDC;
+    width: 70%;
+    display: flex;
+    justify-content: center; /* 가로 가운데 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    text-align: center;
+    margin-left: 150px;
+}
+.color_inner .ver1 img {
+    /* border-top: 1px solid #DCDCDC;
+    border-width: 90%; */
+    padding-top: 150px;
+    width: 15%;
+    height: 15%;
+    margin-left: 65px;
+}
+
+.color_cloud {
+    margin-top: -300px;
+    z-index: 100;
+}
+.color_left img {
+    width: 20%;
+    height: 20%;
+}
+
+.colorpicture {
+    display: flex;
+    justify-content: center; /* 가로 가운데 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    text-align: center;
+    z-index: 999;
+    margin-top: -150px;
+    margin-left: 65px;
+}
+.colorpicture .picture1 img {
+    width: 70%;
+    height: 70%;
+    z-index: 200;
+}
+
+.colorpicture .picture1 p {
+    font-family: 'Noto Sans';
+    color: #707070;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-top: -60px;
+    z-index: 300;
+    letter-spacing: -0.8px;
+}
+
+.color_cloud2 {
+    margin-top: 50px;
+    z-index: 100;
+}
+.color_right img {
+    width: 20%;
+    height: 20%;
+    float: right;
+    margin-top: -260px;
+}
+
+/* 컬러 이미지 */
+/* ===== 추가 이미지 4장 ===== */
+.colortag {
+    padding-top: 200px; 
+    bottom: 50px;
+    /* 상단 여백 조정 */
+    background-color: #fff; /* 배경색 지정 */
+    display: flex;
+    /* flex-wrap: wrap;  */
+    /* 아이템이 넘칠 경우 다음 줄로 내려가도록 설정 */
+    justify-content: center;
+    align-items: center;
+    position: relative; /* 위치 지정을 위해 추가 */
+    /* top: 1000px; */ /* 필요에 따라 위치 조정 */
+    margin-left: 480px;
+}
+.colortag .exinner1 .ex_wrap1 {
+    width: 100%; /* 가로폭을 100%로 설정 */
+    margin: -8px;
+    display: flex;
+    /* flex-wrap: wrap;  */
+    /* 아이템이 넘치면 다음 줄로 내려가도록 설정 */
+    justify-content: center;
+    align-items: center;
+}
+.colortag article {
+    width: 100%; 
+    /* 아이템 간격을 고려한 너비 설정 */
+    margin-right: -13px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px; /* 아이템 내부 패딩 설정 */
+    box-sizing: border-box; /* 내부 패딩이 전체 너비에 포함되도록 설정 */
+}
+/* 마지막 아이템의 오른쪽 여백 제거 */
+.colortag article:last-child {
+    margin-right: 0;
+}
+.colortag article .colorpic {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.colortag article .colorpic::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 35px;
+    height: 52px;
+}
+.colortag article .colorpic img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+.hicolor h1 {
+    color: #707070;
+    font-size: 1.2rem;
+    margin-top: -50px;
+    text-align: center;
+    margin-left: 75px;
+    font-family: 'Dovemayo_wild';
+    z-index: 900;
+}
+
+
+/* 흑백 영역 */
+.black {
+    margin-top: 200px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center; /* 가로 가운데 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    text-align: center;
+}
+.black_line {
+    border-top: 1.5px solid #DCDCDC;
+    width: 70%;
+    display: flex;
+    justify-content: center; /* 가로 가운데 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    text-align: center;
+    margin-left: 150px;
+}
+.black_inner .ver2 img {
+    /* border-top: 1px solid #DCDCDC;
+    border-width: 90%; */
+    padding-top: 150px;
+    width: 15%;
+    height: 15%;
+    margin-left: 65px;
+}
+
+.black_cloud {
+    margin-top: -300px;
+    z-index: 100;
+}
+.black_left img {
+    width: 20%;
+    height: 20%;
+}
+
+.blackpicture {
+    display: flex;
+    justify-content: center; /* 가로 가운데 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    text-align: center;
+    z-index: 999;
+    margin-top: -150px;
+    margin-left: 65px;
+}
+.blackpicture .picture2 img {
+    width: 70%;
+    height: 70%;
+    z-index: 200;
+}
+
+.blackpicture .picture2 p {
+    font-family: 'Noto Sans';
+    color: #707070;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-top: -60px;
+    z-index: 300;
+    letter-spacing: -0.8px;
+}
+
+.black_cloud2 {
+    margin-top: 50px;
+    z-index: 100;
+}
+.black_right img {
+    width: 20%;
+    height: 20%;
+    float: right;
+    margin-top: -260px;
+}
+
+/* 흑백 이미지 */
+/* ===== 추가 이미지 3장 ===== */
+.blacktag {
+    padding-top: 200px; 
+    bottom: 50px;
+    /* 상단 여백 조정 */
+    background-color: #fff; /* 배경색 지정 */
+    display: flex;
+    /* flex-wrap: wrap;  */
+    /* 아이템이 넘칠 경우 다음 줄로 내려가도록 설정 */
+    justify-content: center;
+    align-items: center;
+    position: relative; /* 위치 지정을 위해 추가 */
+    /* top: 1000px; */ /* 필요에 따라 위치 조정 */
+    margin-left: 480px;
+}
+.blacktag .exinner2 .ex_wrap2 {
+    width: 100%; /* 가로폭을 100%로 설정 */
+    margin: -8px;
+    display: flex;
+    /* flex-wrap: wrap;  */
+    /* 아이템이 넘치면 다음 줄로 내려가도록 설정 */
+    justify-content: center;
+    align-items: center;
+}
+.blacktag article {
+    width: calc(33.3333% - 20px); /* 아이템 간격을 고려한 너비 설정 */
+    margin-right: -13px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px; /* 아이템 내부 패딩 설정 */
+    box-sizing: border-box; /* 내부 패딩이 전체 너비에 포함되도록 설정 */
+}
+/* 마지막 아이템의 오른쪽 여백 제거 */
+.blacktag article:last-child {
+    margin-right: 0;
+}
+.blacktag article .blackpic {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.blacktag article .blackpic::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 35px;
+    height: 52px;
+}
+.blacktag article .blackpic img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+.hiblack h1 {
+    color: #707070;
+    margin-top: -50px;
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: 'Dovemayo_wild';
+    margin-left: 75px;
+}
+
+/* cooing company */
+.company {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    margin-left: -470px;
+}
+
+.company .compic {
+    display: flex; /* 가운데 정렬을 위해 flex 사용 */
+    justify-content: center; /* 수평 가운데 정렬 */
+    margin-left: -70px;
+}
+
+.company .compic img {
+    width: 15%;
+    height: 15%;
+}
+
+.company .comtext {
+    margin-left: -580px;
+}
+
+.company .comtext h3 {
+    font-family: 'Noto Sans';
+    font-size: 0.7rem;
+    float: left;
+    line-height: 2.0;
+    margin-bottom: 20px;
+    font-weight: 500;
+    letter-spacing: -0.6px;
+}
+
+.company .comtext h4 {
+    font-family: 'Noto Sans';
+    font-size: 0.7rem;
+    /* float: left; */
+    line-height: 2.0;
+    clear: left;
+    font-weight: 500;
+    letter-spacing: -0.6px;
+}
+
+/* 푸터 스타일 */
+footer {
+    text-align: center; /* 텍스트 가운데 정렬 */
+
+    color: #fff; /* 글자색 설정 */
+    padding: 10px 0; /* 위아래 여백 설정 */
+    padding-bottom: 0; /* 푸터 아래 여백 제거 */
+    position: relative; 
+    /* 상대 위치 설정 */
+    /* z-index: 2;  */
+    /* 푸터를 다른 요소 위에 표시 */
+    
+}
+
+/* 로고 스타일 */
+footer .logo img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100px; /* 원하는 크기로 조절 */
+    height: auto; /* 가로 세로 비율 유지 */
+    position: absolute; /* 절대 위치 설정 */
+    z-index: 1;
+    top: 200px;
+    left: 0;
+    right: 0;
+}
+
+footer .email p {
+    margin-top: 10px; /* 로고와의 간격 조정 */
+    z-index: 10;
+    font-size: 14px; /* 원하는 크기로 조절 */
+    font-family: 'NotoSans';
+    position: relative;
+    color: #000;
+    padding-bottom: 50px;
+}
+
+/* 카피라이트 위치 조정 */
+footer .copyright p {
+    font-size: 12px; /* 원하는 크기로 조절 */
+    font-family: 'NotoSans';
+    position: absolute; /* 절대 위치 설정 */
+    top: 280px; /* 로고와의 간격 조정 (원하는 값으로 조절) */
+    left: 0;
+    right: 0;
+    z-index: 20; /* 다른 요소보다 위에 표시될 z-index 값 설정 */
+    transform: translate(0%, -50%);
+}
